@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function Navbar() {
+  const [menu, setMenu] = useState(false)
+
   return (
   <div id="fijar">
   <header id="header" className="d-flex align-items-center">
@@ -28,11 +30,24 @@ function Navbar() {
             </a>
           </li>
         </ul>
-        <i className="bi bi-list mobile-nav-toggle" />
+        <i className="bi bi-list mobile-nav-toggle" onClick={()=>setMenu(!menu)} />
+       
       </nav>
       {/* .navbar */}
-    </div>
-  </header>    </div>
+    </div>    
+  
+    { menu ?
+        <div id="hiddenmenu" className='navbar-mobile'>
+          <span className="mobile-nav-toggle"onClick={()=>setMenu(!menu)}>X</span>
+          <ul>
+            <li><a href="#hero" onClick={()=>setMenu(!menu)}>Inicio</a></li>
+            <li><a href="#services" onClick={()=>setMenu(!menu)}>Servicios</a></li>
+            <li><a href="#portfolio" onClick={()=>setMenu(!menu)}>Trabajos</a></li>
+            <li><a href="#topbar" onClick={()=>setMenu(!menu)}>Contactos</a></li>
+          </ul>
+        </div> :<></> }
+  </header>    
+  </div>
   )
 }
 
