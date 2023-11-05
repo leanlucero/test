@@ -9,7 +9,7 @@ const imagenes = imagenesBD
     <div>
       <>
   {/* ======= Portfolio Section ======= */}
-  <section id="portfolio" className="portfolio">
+  <section id="trabajos" className="portfolio">
     <div className="container">
       <div className="section-title">
         <span>Nuestros Trabajos</span>
