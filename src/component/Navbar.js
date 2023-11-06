@@ -32,7 +32,7 @@ const listOptions = [
   return (
   <div id="fijar">
   <header id="header" className="d-flex align-items-center">
-    <div className="d-flex align-items-center justify-content-between">
+    <div className="container d-flex align-items-center justify-content-between">
       <div className="logo">
       <img src={process.env.PUBLIC_URL + '/assets/img/icoitaliasinletras2.png'} alt="logo aluminio italia" />
         <a href="index.html">Aluminio Italia</a>
