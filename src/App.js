@@ -5,6 +5,7 @@ import Navbar from './component/Navbar'
 import Servicios from './component/Servicios'
 import Porfolio from './component/Porfolio'
 import Nosotros from './component/Nosotros'
+import BotonWSP from './component/BotonWSP'
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Titulo />
       <Servicios />
       <Nosotros />
+      <BotonWSP />
       <Porfolio />
       <Footer/>
     </div>

@@ -166,6 +166,22 @@ h6 {
   width: 100%;
 }
 
+.whatsap i{
+	scale: 6;
+  color: black;
+  position:fixed;
+	right: 7%;
+  top:90%;
+  opacity: 0.7;
+}
+
+.whatsap i:hover{
+  color: green;
+  cursor: pointer;
+  scale: 8;
+  opacity: 1;
+}
+
 #header {
   background: rgba(25, 25, 25, 0.95);
   transition: all 0.5s;
@@ -255,7 +271,9 @@ h6 {
   line-height: 0;
   transition: 0.5s;
 }
-
+.mobile-nav-toggle:hover{
+  color:#1674cc;
+}
 
 .mobile-nav-toggle.bi-x {
   color: #16ccc3;
