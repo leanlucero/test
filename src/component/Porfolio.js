@@ -3,6 +3,7 @@ import imagenesBD from '../component/imagenes'
 function Porfolio() {
 
 const [img, setImg] = useState('all');
+const [popup, setPopup] = useState(null);
 
 const imagenes = imagenesBD
   return (
@@ -36,7 +37,7 @@ const imagenes = imagenesBD
       >
         {imagenes.map((i) => (
         i.categoria === img || img === 'all'?
-        <div className="col-lg-4 col-md-6 portfolio-item ">
+        <div className="col-lg-4 col-md-6 portfolio-item " onClick={()=>setPopup(i)}>
           <img
             src={i.url}
             className="img-fluid"
@@ -46,6 +47,13 @@ const imagenes = imagenesBD
       
         ))}
       </div>
+    </div>
+    <div className='pop-up' style={{display: popup ? 'block' : 'none'}}>
+          <span onClick={()=> setPopup(null)}>&times;</span>
+          {
+            popup ? <img src={popup.url} className="imagen" alt="" /> 
+            :<></>
+          }
     </div>
   </section>
   {/* End Portfolio Section */}
